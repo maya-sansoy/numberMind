@@ -27,23 +27,18 @@ public class Main {
         int digits = keyboard.nextInt();
 //        int[] number = new int[digits];
 
-        int[] number = {1, 2, 3};
+        int[] number = new int[digits];
 
         boolean win = false;
 
         // generating random digits for each index value in the array
 
-//        for (int i = 0; i < digits; i++) {
-//            number[i] = num.nextInt(0,9);
-//        }
-
-
+        for (int i = 0; i < digits; i++) {
+            number[i] = num.nextInt(0,9);
+        }
 
         System.out.println("how many guesses do you want to have?");
         int guessesRemaining = keyboard.nextInt();
-
-
-        //0 = wrong, 1 = correct
 
 
         do  {
@@ -66,10 +61,9 @@ public class Main {
             int counterCorrectDigit = 0;
             int counterCorrectPlace = 0;
             int[] correct = new int[digits];
+            //^  0 = wrong, 1 = correct
 
             for (int i = 0; i < digits; i++) {
-
-
                 for (int n = 0; n < digits; n++) {
 
                     if (guess[i] == number[n]) {
